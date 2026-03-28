@@ -1162,19 +1162,19 @@ document.addEventListener("DOMContentLoaded", renderGallery);
         const maxPlayers = isOnline ? data.players.max : 0;
 
         if (isOnline) {
-         statusIndicator.className =
-            'w-3 h-3 rounded-full bg-red-500 shadow-lg shadow-red-500/50';
-          statusText.textContent = ' Serveur hors ligne';
-          statusText.className = 'text-sm text-red-400 font-medium';
-          statusPlayers.textContent = '';
-          
-        } else {
           statusIndicator.className =
             'w-3 h-3 rounded-full bg-green-500 shadow-lg shadow-green-500/50';
           statusText.textContent = ' Serveur en ligne';
           statusText.className = 'text-sm text-green-400 font-medium';
           statusPlayers.textContent = `${playerCount}/${maxPlayers} joueurs`;
           statusPlayers.className = 'text-sm text-green-300';
+          
+        } else {
+          statusIndicator.className =
+            'w-3 h-3 rounded-full bg-red-500 shadow-lg shadow-red-500/50';
+          statusText.textContent = ' Serveur hors ligne';
+          statusText.className = 'text-sm text-red-400 font-medium';
+          statusPlayers.textContent = '';
         }
 
       } catch (error) {
