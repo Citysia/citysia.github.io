@@ -1154,7 +1154,7 @@ document.addEventListener("DOMContentLoaded", renderGallery);
         // Simulation du statut serveur (aléatoire pour la démo)
         // Dans un vrai cas, vous appelleriez une API de statut Minecraft
         const SERVER_IP = "CitysiaSMP.aternos.me:20525"; // ou 123.45.67.89
-        const response = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
+        const response = await fetch(`https://api.mcsrvstat.us/3/${SERVER_IP}`);
         const data = await response.json();
 
         const isOnline = data.online;
